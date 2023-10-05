@@ -80,7 +80,7 @@ public class UsuarioDados {
         String[] colunas;
         while(scan.hasNextLine()) {
             linha =  scan.nextLine();
-            colunas = linha.split(",");
+            colunas = linha.split(";");
             String nome = colunas[0];
             String email = colunas[1];
             String login = colunas[2];
@@ -97,13 +97,13 @@ public class UsuarioDados {
         FileWriter arquivo;
         if(!file.exists()) {
             file.createNewFile();
-            String cabecalho = "nome,email,login,senha,telefone";
+            String cabecalho = "nome;email;login;senha;telefone";
             arquivo = new FileWriter(file, true);
             arquivo.write(cabecalho+"\r\n");
             arquivo.close();
         }
         arquivo = new FileWriter(file, true);
-        String text = nome+","+email+","+login+","+senha+","+telefone+"\r\n";
+        String text = nome+";"+email+";"+login+";"+senha+";"+telefone+"\r\n";
         arquivo.write(text);
         arquivo.close();
     }
