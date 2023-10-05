@@ -69,6 +69,10 @@ public class InterfacePrincipal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         ColLogin = new javax.swing.JTextField();
         ColTel = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        TextoRecuperado = new javax.swing.JTextPane();
+        BotaoRecupera = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Selecionador de Alunos");
@@ -200,6 +204,41 @@ public class InterfacePrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Cadastrar", jPanel2);
 
+        jScrollPane2.setViewportView(TextoRecuperado);
+
+        BotaoRecupera.setText("Recuperar");
+        BotaoRecupera.setToolTipText("Recupera a senha perdida");
+        BotaoRecupera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoRecuperaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(BotaoRecupera)
+                        .addGap(0, 246, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BotaoRecupera)
+                .addContainerGap(300, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Menes", jPanel3);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -239,6 +278,10 @@ public class InterfacePrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ColLoginActionPerformed
 
+    private void BotaoRecuperaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoRecuperaActionPerformed
+
+    }//GEN-LAST:event_BotaoRecuperaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -276,6 +319,7 @@ public class InterfacePrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoCadas;
+    private javax.swing.JButton BotaoRecupera;
     private javax.swing.JTextField ColEmail;
     private javax.swing.JTextField ColLogin;
     private javax.swing.JPasswordField ColSenha;
@@ -283,6 +327,7 @@ public class InterfacePrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField ColetNome;
     private javax.swing.JList<String> ListaAlunos;
     private javax.swing.JLabel TextoInutil;
+    private javax.swing.JTextPane TextoRecuperado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -290,7 +335,9 @@ public class InterfacePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
